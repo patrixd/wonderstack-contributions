@@ -1,0 +1,15 @@
+{
+  "name": "wonderstack-community",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Open catalog of AI tools and free training (CC BY 4.0 data, CC BY-SA 4.0 texts, MIT code).",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "check-links": "node scripts/check-links.mjs --all"
+  }
+}

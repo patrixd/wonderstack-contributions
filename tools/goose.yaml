@@ -1,0 +1,25 @@
+# WonderStack community catalog — data licence: CC BY 4.0 (see LICENSE-DATA.md).
+# Public facts only. Format and rules: CONTRIBUTING.md. Validate: npm run validate
+# Example of kind "agent". One example of each kind is kept here; add a new file for a contribution.
+id: goose
+kind: agent
+name: "goose"
+vendor: "Block"
+category: code
+url: "https://github.com/block/goose"
+best_for: "A local, extensible agent that uses MCP servers to automate engineering tasks"
+pricing: "Free (open source)"
+level: intermediate
+free_tier: true
+tagline: "An open-source, on-machine agent built on MCP."
+tags:
+  - agent
+  - mcp
+  - local
+aliases: []
+platforms:
+  - cli
+  - any_mcp
+docs_url: null
+github_repo: block/goose
+install_hint: null

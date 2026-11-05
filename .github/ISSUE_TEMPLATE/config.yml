@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Contribute from WonderStack (no Git needed)
+    url: https://wonderstackai.com/tools
+    about: Press "Suggest a tool", "Add free training" or "Fix this tool"; WonderStack opens the pull request for you.
+  - name: Security or personal data problem
+    url: mailto:security@wonderstackai.com
+    about: Please e-mail us instead of opening a public issue.

@@ -1,0 +1,24 @@
+# WonderStack community catalog — data licence: CC BY 4.0 (see LICENSE-DATA.md).
+# Public facts only. Format and rules: CONTRIBUTING.md. Validate: npm run validate
+# Example of kind "mcp_server". One example of each kind is kept here; add a new file for a contribution.
+id: github_mcp
+kind: mcp_server
+name: "GitHub MCP server"
+vendor: "GitHub"
+category: code
+url: "https://github.com/github/github-mcp-server"
+best_for: "Letting an assistant read repositories, issues and pull requests and act on them"
+pricing: "Free (open source)"
+level: intermediate
+free_tier: true
+tagline: "GitHub’s official MCP server."
+tags:
+  - github
+  - issues
+  - "pull requests"
+aliases: []
+platforms:
+  - any_mcp
+docs_url: null
+github_repo: github/github-mcp-server
+install_hint: "Add it to your MCP client’s server list (Claude, Claude Code, Cursor, VS Code). See the README for the exact command."

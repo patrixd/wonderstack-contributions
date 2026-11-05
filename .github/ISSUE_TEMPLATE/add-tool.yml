@@ -1,0 +1,48 @@
+name: Add a tool
+description: Suggest a tool, skill, agent or MCP server that is missing. A maintainer turns it into tools/<slug>.yaml.
+title: 'Add tool: '
+labels: ['add-tool']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Public facts only — never personal data (e-mails, phone numbers, private people). Unknown is better than wrong.
+        Prefer a pull request? See CONTRIBUTING.md.
+  - type: input
+    id: name
+    attributes: { label: 'Name', placeholder: 'Superwhisper' }
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes: { label: 'Official page (https)', placeholder: 'https://…' }
+    validations: { required: true }
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options: [tool, skill, agent, mcp_server]
+    validations: { required: true }
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: [research, write, visual, media, code, ops, data, teach]
+    validations: { required: true }
+  - type: textarea
+    id: best_for
+    attributes: { label: 'What it is best for (10–300 characters)', description: 'One sentence about the job it does.' }
+    validations: { required: true }
+  - type: input
+    id: pricing
+    attributes: { label: 'Pricing as the maker states it', placeholder: 'Free / $10/mo (Pro)  —  or "Unknown"' }
+  - type: input
+    id: maker
+    attributes: { label: 'Who makes it' }
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: This contains no personal data, and I agree that my submission is published under CC BY 4.0.
+          required: true
+        - label: I work for the maker of this tool (fine — we just want to know).

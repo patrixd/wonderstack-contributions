@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wonderstackai.com/schema/community/tool.schema.json",
+  "title": "WonderStack community catalog entry (tools/<slug>.yaml)",
+  "description": "One tool, skill, agent or MCP server. Public facts only. Licence of the data: CC BY 4.0.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "kind",
+    "name",
+    "category",
+    "url",
+    "best_for",
+    "pricing"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]{2,40}$",
+      "description": "Lower snake case; the file name is the id with - instead of _."
+    },
+    "kind": {
+      "enum": [
+        "tool",
+        "skill",
+        "agent",
+        "mcp_server"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 80
+    },
+    "vendor": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 80
+    },
+    "category": {
+      "enum": [
+        "research",
+        "write",
+        "visual",
+        "media",
+        "code",
+        "ops",
+        "data",
+        "teach"
+      ]
+    },
+    "url": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 500,
+      "pattern": "^https://[^\\s<>\"]+$",
+      "description": "The official page or repository (https)."
+    },
+    "best_for": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 300
+    },
+    "pricing": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 120,
+      "description": "As the vendor states it, e.g. \"Free / $20/mo (Pro)\". \"Unknown\" when unsure."
+    },
+    "level": {
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    "free_tier": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "tagline": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 5,
+      "maxLength": 160
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 40,
+        "pattern": "^[a-z0-9][a-z0-9 .+#/-]*$"
+      },
+      "maxItems": 12,
+      "uniqueItems": true
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 60
+      },
+      "maxItems": 12,
+      "uniqueItems": true
+    },
+    "platforms": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "claude",
+          "claude_code",
+          "cursor",
+          "copilot",
+          "vscode",
+          "chatgpt",
+          "gemini",
+          "windsurf",
+          "cline",
+          "n8n",
+          "any_mcp",
+          "web",
+          "cli"
+        ]
+      },
+      "maxItems": 13,
+      "uniqueItems": true
+    },
+    "docs_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 10,
+      "maxLength": 500,
+      "pattern": "^https://[^\\s<>\"]+$"
+    },
+    "github_repo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+    },
+    "install_hint": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 5,
+      "maxLength": 400
+    }
+  }
+}

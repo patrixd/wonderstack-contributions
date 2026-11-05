@@ -1,0 +1,179 @@
+{
+  "$comment": "WonderStack jobs taxonomy (generated from the app). Use the id in training files (job: <id>).",
+  "families": {
+    "engineering": "Engineering",
+    "data": "Data",
+    "product": "Product",
+    "design": "Design & media",
+    "sales": "Sales",
+    "marketing": "Marketing",
+    "operations": "Operations",
+    "support": "Customer support",
+    "people": "People & HR",
+    "education": "Teaching",
+    "research": "Research",
+    "leadership": "Founders & leads"
+  },
+  "jobs": [
+    {
+      "id": "write_code",
+      "label": "Write and change code",
+      "family": "engineering"
+    },
+    {
+      "id": "review_code",
+      "label": "Review code and pull requests",
+      "family": "engineering"
+    },
+    {
+      "id": "write_tests",
+      "label": "Write tests and QA",
+      "family": "engineering"
+    },
+    {
+      "id": "build_prototype",
+      "label": "Build a prototype or internal tool",
+      "family": "engineering"
+    },
+    {
+      "id": "automate_workflow",
+      "label": "Automate a workflow between apps",
+      "family": "operations"
+    },
+    {
+      "id": "analyse_data",
+      "label": "Analyse data and spreadsheets",
+      "family": "data"
+    },
+    {
+      "id": "build_report",
+      "label": "Build a recurring report",
+      "family": "data"
+    },
+    {
+      "id": "research_topic",
+      "label": "Research a topic with sources",
+      "family": "research"
+    },
+    {
+      "id": "summarise_documents",
+      "label": "Read and summarise long documents",
+      "family": "research"
+    },
+    {
+      "id": "write_content",
+      "label": "Write marketing content",
+      "family": "marketing"
+    },
+    {
+      "id": "social_media",
+      "label": "Plan and post on social media",
+      "family": "marketing"
+    },
+    {
+      "id": "seo",
+      "label": "Search engine and AI visibility (SEO)",
+      "family": "marketing"
+    },
+    {
+      "id": "make_images",
+      "label": "Make images and graphics",
+      "family": "design"
+    },
+    {
+      "id": "make_slides",
+      "label": "Make slides and presentations",
+      "family": "design"
+    },
+    {
+      "id": "edit_video",
+      "label": "Edit video and podcasts",
+      "family": "design"
+    },
+    {
+      "id": "product_specs",
+      "label": "Write product specs and user stories",
+      "family": "product"
+    },
+    {
+      "id": "user_research",
+      "label": "Run and synthesise user research",
+      "family": "product"
+    },
+    {
+      "id": "meeting_notes",
+      "label": "Take meeting notes and follow-ups",
+      "family": "operations"
+    },
+    {
+      "id": "project_status",
+      "label": "Track projects and write status updates",
+      "family": "operations"
+    },
+    {
+      "id": "email_inbox",
+      "label": "Handle e-mail and the inbox",
+      "family": "operations"
+    },
+    {
+      "id": "sales_outreach",
+      "label": "Prospect and write sales outreach",
+      "family": "sales"
+    },
+    {
+      "id": "sales_proposals",
+      "label": "Write proposals and quotes",
+      "family": "sales"
+    },
+    {
+      "id": "customer_support",
+      "label": "Answer customer questions",
+      "family": "support"
+    },
+    {
+      "id": "knowledge_base",
+      "label": "Write and keep a knowledge base",
+      "family": "support"
+    },
+    {
+      "id": "recruiting",
+      "label": "Recruit and screen candidates",
+      "family": "people"
+    },
+    {
+      "id": "onboard_people",
+      "label": "Onboard and train new people",
+      "family": "people"
+    },
+    {
+      "id": "plan_lessons",
+      "label": "Plan lessons and materials",
+      "family": "education"
+    },
+    {
+      "id": "grade_feedback",
+      "label": "Give feedback and grade work",
+      "family": "education"
+    },
+    {
+      "id": "translate",
+      "label": "Translate and localise",
+      "family": "operations"
+    },
+    {
+      "id": "strategy_planning",
+      "label": "Plan strategy and decisions",
+      "family": "leadership"
+    },
+    {
+      "id": "finance_admin",
+      "label": "Finance and admin paperwork",
+      "family": "operations"
+    },
+    {
+      "id": "learn_ai",
+      "label": "Learn to use AI tools",
+      "family": "education"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+name: Fix a tool
+description: Something in tools/<slug>.yaml is wrong or out of date.
+title: 'Fix tool: '
+labels: ['fix-tool']
+body:
+  - type: input
+    id: tool
+    attributes: { label: 'Tool id or file', placeholder: 'tools/claude-code.yaml' }
+    validations: { required: true }
+  - type: textarea
+    id: wrong
+    attributes: { label: 'What is wrong, and what is right' }
+    validations: { required: true }
+  - type: input
+    id: source
+    attributes: { label: 'Source that confirms it (official page, changelog, pricing page)' }
+    validations: { required: true }
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: This contains no personal data, and I agree that my submission is published under CC BY 4.0.
+          required: true

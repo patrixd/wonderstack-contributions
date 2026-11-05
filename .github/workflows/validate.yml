@@ -1,0 +1,75 @@
+# Validates every pull request and push, and checks all links weekly.
+# Security: `pull_request` (never `pull_request_target`) — forks run with a read-only token and no secrets.
+# Actions are pinned to full commit SHAs (update them with Renovate/Dependabot, never with a moving tag).
+name: validate
+
+on:
+  pull_request:
+    paths: ['tools/**', 'training/**', 'schema/**', 'scripts/**', 'jobs.json', '.github/workflows/**']
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 6 * * 1' # Mondays 06:17 UTC: full link check
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+        with:
+          node-version: 22
+      - name: Schemas, names, references, personal data
+        run: node scripts/validate.mjs
+      - name: Links (changed files on pull requests, everything otherwise)
+        env:
+          EVENT: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          if [ "$EVENT" = "pull_request" ]; then
+            git diff --name-only --diff-filter=AM "$BASE_SHA" HEAD -- tools training > changed.txt
+            node scripts/check-links.mjs --files changed.txt
+          else
+            node scripts/check-links.mjs --all
+          fi
+
+  dco:
+    # Every commit needs a Signed-off-by line (CONTRIBUTING.md), except commits by the WonderStack bot account whose
+    # pull requests carry the contributor's confirmation in the description. Set the repository variable
+    # CONTRIB_BOT_EMAIL to the bot's commit e-mail.
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check sign-off
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          BOT_EMAIL: ${{ vars.CONTRIB_BOT_EMAIL }}
+        run: |
+          missing=0
+          for c in $(git rev-list --no-merges "$BASE_SHA..$HEAD_SHA"); do
+            email=$(git log -1 --format='%ae' "$c")
+            if [ -n "$BOT_EMAIL" ] && [ "$email" = "$BOT_EMAIL" ]; then continue; fi
+            if ! git log -1 --format='%B' "$c" | grep -qE '^Signed-off-by: .+ <.+>$'; then
+              echo "::error::Commit $c has no Signed-off-by line (git commit -s). See CONTRIBUTING.md."
+              missing=1
+            fi
+          done
+          exit $missing
