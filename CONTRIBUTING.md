@@ -22,7 +22,7 @@ git commit -s -m "Add tool: Superwhisper"
 
 That adds `Signed-off-by: Your Name <you@example.com>` and certifies that you wrote the change (or may submit it) and
 that you license it under this repository's licence for that folder (CC BY 4.0 for `tools/`, CC BY-SA 4.0 for
-`training/`, MIT for code). The address in the sign-off is the one Git already records in the commit; use a GitHub
+`training/`, MIT for `skills/`). A change to `scripts/`, `schema/`, or a workflow stays in this repository. The address in the sign-off is the one Git already records in the commit; use a GitHub
 `noreply` address if you prefer not to publish yours.
 
 Pull requests opened by the WonderStack bot carry the contributor's confirmation in the PR description (they ticked
