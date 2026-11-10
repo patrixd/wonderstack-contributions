@@ -1,10 +1,19 @@
+The catalog data in tools/ is CC BY 4.0 (LICENSE-DATA.md). The training descriptions in training/ are CC BY-SA 4.0
+(LICENSE-CONTENT.md). Those licences are what require credit.
+
+skills/ is MIT, below. A copy of a skill keeps this copyright notice and this permission notice. That notice is not
+the catalog credit. MIT does not require anyone to name "WonderStack community catalog".
+
+scripts/, schema/, and .github/ belong to this repository. They check and review contributions here. They are not
+licensed for reuse or for copying into another project.
+
+---
+
 MIT License
 
 Copyright (c) 2026 WonderStack and the contributors of the WonderStack community catalog
 
-This licence applies to the code in this repository (scripts/, .github/, schema/). The catalog data in tools/ is
-licensed under CC BY 4.0 (LICENSE-DATA.md) and the training descriptions in training/ under CC BY-SA 4.0
-(LICENSE-CONTENT.md).
+This MIT licence applies only to skills/.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

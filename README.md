@@ -2,7 +2,8 @@
 
 An open list of **what people contribute**: a tool [WonderStack](https://wonderstackai.com) does not list yet, a
 correction to a public fact, and **free training** that teaches a tool for a real job. It is not a copy of the
-WonderStack catalog. Anyone can read it, reuse it, and add to it with a pull request — from GitHub, or from the
+WonderStack catalog. Anyone can read a contributed file and reuse it with the credit its licence asks for, and anyone
+can add to the list with a pull request — from GitHub, or from the
 "Suggest a tool / Add free training / Fix this tool" buttons on WonderStack, which open the pull request for you.
 The person who sends the pull request is the one credited, which is how the list grows.
 
@@ -22,7 +23,8 @@ skills/catalog-extract/    instructions an agent follows to catalog its own skil
 |---|---|---|
 | `tools/` (catalog data) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — see [LICENSE-DATA.md](LICENSE-DATA.md) | Facts about products should travel as far as possible: anyone (other directories, researchers, companies, AI assistants) may reuse them, commercially too, as long as they credit "WonderStack community catalog". Share-alike would stop many reusers from mixing it with their own data, and a database of short facts gains little from copyleft. |
 | `training/` (descriptions written by contributors) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — see [LICENSE-CONTENT.md](LICENSE-CONTENT.md) | These are original texts. Share-alike keeps improved versions open (the Wikipedia model) while still allowing commercial reuse with credit. The linked course itself keeps **its own** licence (stated in its `licence:` field); we only link to it. |
-| `scripts/`, `skills/`, workflows, schemas | [MIT](LICENSE) | Plain, permissive code licence so anyone can build their own validator, importer, or agent skill. |
+| `skills/` | [MIT](LICENSE) | Agent instructions, same kind of pack as other public skill repositories. A copy keeps the MIT notice. That notice is not a credit line: MIT does not require anyone to name this catalog. |
+| `scripts/`, `schema/`, workflows | Part of this repository ([LICENSE](LICENSE)) | These files check and review contributions here. They are not a library, and they are not licensed for reuse or copying. |
 
 Contributions are accepted under the same licence as the folder they land in ("inbound = outbound"), confirmed with the
 [Developer Certificate of Origin 1.1](https://developercertificate.org/) — see [CONTRIBUTING.md](CONTRIBUTING.md).
