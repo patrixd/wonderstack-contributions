@@ -20,5 +20,5 @@ body:
     attributes:
       label: Confirmation
       options:
-        - label: This contains no personal data, and I agree that my submission is published under CC BY 4.0.
+        - label: This contains no personal data, and I agree that my submission is published under Apache 2.0.
           required: true

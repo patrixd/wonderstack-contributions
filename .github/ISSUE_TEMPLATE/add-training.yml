@@ -45,6 +45,6 @@ body:
     attributes:
       label: Confirmation
       options:
-        - label: It is free, my description contains no personal data, and I agree that it is published under CC BY-SA 4.0.
+        - label: It is free, my description contains no personal data, and I agree that it is published under Apache 2.0.
           required: true
         - label: I made this training or work for its publisher.

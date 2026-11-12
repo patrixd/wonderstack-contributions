@@ -10,5 +10,5 @@
 - [ ] The `licence:` field is the licence of the linked training (`free-to-access` when it is all rights reserved)
 - [ ] The description is in my own words (40–1500 characters, at most 2 links)
 - [ ] `npm run validate` passes; no personal data
-- [ ] Signed off (`git commit -s`) — DCO 1.1, CC BY-SA 4.0 for the description
+- [ ] Signed off (`git commit -s`) — DCO 1.1, Apache 2.0 for the description
 - [ ] If I made this training or work for its publisher, I say so here:

@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://wonderstackai.com/schema/community/tool.schema.json",
   "title": "WonderStack community catalog entry (tools/<slug>.yaml)",
-  "description": "One tool, skill, agent or MCP server. Public facts only. Licence of the data: CC BY 4.0.",
+  "description": "One tool, skill, agent or MCP server. Public facts only. Licence of the data: Apache 2.0.",
   "type": "object",
   "additionalProperties": false,
   "required": [

@@ -13,4 +13,4 @@
 - [ ] If this is training: it is free (no paywall, no trial that ends in a charge)
 - [ ] If I work for the maker of this tool, I say so here:
 - [ ] My commits are signed off (`git commit -s`) under the Developer Certificate of Origin 1.1, and I license this
-      under the folder's licence (CC BY 4.0 for `tools/`, CC BY-SA 4.0 for `training/`, MIT for `skills/`)
+      under the folder's licence (Apache 2.0 for `tools/`, `training/`, and `skills/`)

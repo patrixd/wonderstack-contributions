@@ -2,8 +2,8 @@
 // Changes: open a pull request in either repository; the app copies this file back on the next export.
 /**
  * community-contrib (docs/COMMUNITY-CONTRIB.md §1–§2): the file formats of the open data repository
- * (`wonderstack-community`): `tools/<slug>.yaml` (catalog entries, CC BY 4.0) and `training/<slug>.md` (free training,
- * front matter + a short description, CC BY-SA 4.0). One module is the single source of truth for:
+ * (`wonderstack-community`): `tools/<slug>.yaml` (catalog entries, Apache 2.0) and `training/<slug>.md` (free training,
+ * front matter + a short description, Apache 2.0). One module is the single source of truth for:
  *
  *   - the JSON Schemas (`TOOL_SCHEMA`, `TRAINING_SCHEMA`) the repository's CI validates against,
  *   - a small schema validator (the subset of JSON Schema the two schemas use),
@@ -25,7 +25,7 @@ export const TRAINING_LICENCES = ['CC-BY-4.0', 'CC-BY-SA-4.0', 'CC0-1.0', 'MIT',
 export const TRAINING_FORMATS = ['course', 'video', 'article', 'guide', 'exercise', 'docs'];
 export const TRAINING_LANGUAGES = ['en', 'es', 'fr', 'de', 'pt', 'it', 'other'];
 /** Repository licences (README explains the choice). */
-export const REPO_LICENCES = { tools: 'CC-BY-4.0', training: 'CC-BY-SA-4.0', code: 'MIT' };
+export const REPO_LICENCES = { tools: 'Apache-2.0', training: 'Apache-2.0', code: 'Apache-2.0' };
 export const ID_PATTERN = '^[a-z0-9_]{2,40}$';
 export const SLUG_PATTERN = '^[a-z0-9][a-z0-9-]{1,79}$';
 export const HTTPS_PATTERN = '^https://[^\\s<>"]+$';
@@ -54,7 +54,7 @@ export const TOOL_SCHEMA = {
     $schema: 'https://json-schema.org/draft/2020-12/schema',
     $id: 'https://wonderstackai.com/schema/community/tool.schema.json',
     title: 'WonderStack community catalog entry (tools/<slug>.yaml)',
-    description: 'One tool, skill, agent or MCP server. Public facts only. Licence of the data: CC BY 4.0.',
+    description: 'One tool, skill, agent or MCP server. Public facts only. Licence of the data: Apache 2.0.',
     type: 'object',
     additionalProperties: false,
     required: ['id', 'kind', 'name', 'category', 'url', 'best_for', 'pricing'],
@@ -82,7 +82,7 @@ export const TRAINING_SCHEMA = {
     $schema: 'https://json-schema.org/draft/2020-12/schema',
     $id: 'https://wonderstackai.com/schema/community/training.schema.json',
     title: 'WonderStack free training (front matter of training/<slug>.md)',
-    description: 'A free course, video, guide or exercise that teaches a tool for a job. The description below the front matter is CC BY-SA 4.0.',
+    description: 'A free course, video, guide or exercise that teaches a tool for a job. The description below the front matter is Apache 2.0.',
     type: 'object',
     additionalProperties: false,
     required: ['title', 'url', 'tools', 'job', 'level', 'duration_minutes', 'licence', 'cost'],
@@ -367,7 +367,7 @@ export function toYaml(obj, keys, header = []) {
     return `${lines.join('\n')}\n`;
 }
 export const TOOL_KEYS = ['id', 'kind', 'name', 'vendor', 'category', 'url', 'best_for', 'pricing', 'level', 'free_tier', 'tagline', 'tags', 'aliases', 'platforms', 'docs_url', 'github_repo', 'install_hint'];
-export const TOOL_HEADER = ['WonderStack community catalog — data licence: CC BY 4.0 (see LICENSE-DATA.md).', 'Public facts only. Format and rules: CONTRIBUTING.md. Validate: npm run validate'];
+export const TOOL_HEADER = ['WonderStack community catalog — data licence: Apache 2.0 (see LICENSE-DATA.md).', 'Public facts only. Format and rules: CONTRIBUTING.md. Validate: npm run validate'];
 export function toolToYaml(t) {
     return toYaml(t, TOOL_KEYS, TOOL_HEADER);
 }
