@@ -9,7 +9,7 @@ description: >-
 # Extract catalog entries from this environment
 
 Read the skills, subagents, and MCP servers this agent can see, and write one `tools/<slug>.yaml` per public item.
-The files are public facts under CC BY 4.0. Copy the example that matches the kind, then replace the facts:
+The files are public facts under Apache 2.0. Copy the example that matches the kind, then replace the facts:
 
 | Kind | When | Example |
 |---|---|---|
@@ -76,4 +76,4 @@ install_hint: null        # public install line, or null
 node scripts/validate.mjs tools/<slug>.yaml
 ```
 
-Fix every error it prints. Then list the new files and the items you skipped, with the reason. Commit only when the user asks. A commit that adds a catalog file is signed off (`git commit -s`) under CC BY 4.0.
+Fix every error it prints. Then list the new files and the items you skipped, with the reason. Commit only when the user asks. A commit that adds a catalog file is signed off (`git commit -s`) under Apache 2.0.

@@ -1,4 +1,4 @@
-# WonderStack community catalog — data licence: CC BY 4.0 (see LICENSE-DATA.md).
+# WonderStack community catalog — data licence: Apache 2.0 (see LICENSE-DATA.md).
 # Public facts only. Format and rules: CONTRIBUTING.md. Validate: npm run validate
 # Example of kind "tool". One example of each kind is kept here; add a new file for a contribution.
 id: chatgpt

@@ -21,9 +21,9 @@ skills/catalog-extract/    instructions an agent follows to catalog its own skil
 
 | What | Licence | Why |
 |---|---|---|
-| `tools/` (catalog data) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — see [LICENSE-DATA.md](LICENSE-DATA.md) | Facts about products should travel as far as possible: anyone (other directories, researchers, companies, AI assistants) may reuse them, commercially too, as long as they credit "WonderStack community catalog". Share-alike would stop many reusers from mixing it with their own data, and a database of short facts gains little from copyleft. |
-| `training/` (descriptions written by contributors) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — see [LICENSE-CONTENT.md](LICENSE-CONTENT.md) | These are original texts. Share-alike keeps improved versions open (the Wikipedia model) while still allowing commercial reuse with credit. The linked course itself keeps **its own** licence (stated in its `licence:` field); we only link to it. |
-| `skills/` | [MIT](LICENSE) | Agent instructions, same kind of pack as other public skill repositories. A copy keeps the MIT notice. That notice is not a credit line: MIT does not require anyone to name this catalog. |
+| `tools/` (catalog data) | [Apache 2.0](LICENSE-APACHE) — see [LICENSE-DATA.md](LICENSE-DATA.md) and [NOTICE](NOTICE) | A copy may be used and shipped, including commercially. Recipients get this licence, the copyright, and NOTICE, and changed files are marked. |
+| `training/` (descriptions written by contributors) | [Apache 2.0](LICENSE-APACHE) — see [LICENSE-CONTENT.md](LICENSE-CONTENT.md) | Same conditions as `tools/`. The linked course keeps **its own** licence (stated in its `licence:` field); we only link to it. |
+| `skills/` | [Apache 2.0](LICENSE-APACHE) — see [NOTICE](NOTICE) | Same conditions as `tools/` and `training/`. |
 | `scripts/`, `schema/`, workflows | Part of this repository ([LICENSE](LICENSE)) | These files check and review contributions here. They are not a library, and they are not licensed for reuse or copying. |
 
 Contributions are accepted under the same licence as the folder they land in ("inbound = outbound"), confirmed with the
